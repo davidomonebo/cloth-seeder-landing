@@ -89,7 +89,7 @@ export default function FeaturedCollection() {
       name: 'High-Waisted Tailored Trousers',
       price: '34,000',
       image:
-        'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop',
+        '/images/product3.png',
       category: 'Bottoms',
     },
     {
@@ -97,7 +97,7 @@ export default function FeaturedCollection() {
       name: 'Minimalist White Shirt',
       price: '18,950',
       image:
-        'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=500&h=600&fit=crop',
+        '/images/product4.png',
       category: 'Tops',
     },
     {
@@ -105,7 +105,7 @@ export default function FeaturedCollection() {
       name: 'Silk Evening Dress',
       price: '64,950',
       image:
-        'https://images.unsplash.com/photo-1595777707802-91d177c547e1?w=500&h=600&fit=crop',
+       '/images/product5.png',
       category: 'Dresses',
     },
     {
@@ -113,7 +113,7 @@ export default function FeaturedCollection() {
       name: 'Premium Leather Accessories',
       price: '29,950',
       image:
-        'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=600&fit=crop',
+        '/images/product6.png',
       category: 'Accessories',
     },
   ]
