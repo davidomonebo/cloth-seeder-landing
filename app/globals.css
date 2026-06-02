@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply px-8 py-3 bg-wale-black text-wale-white font-semibold text-lg transition-all duration-300 hover:bg-wale-gold hover:text-wale-black cursor-pointer;
+}
+
+.btn-secondary {
+  @apply px-8 py-3 border-2 border-wale-black text-wale-black font-semibold text-lg transition-all duration-300 hover:bg-wale-black hover:text-wale-white cursor-pointer;
+}
+
+/* Section Styles */
+.section {
+  @apply py-24;
+}
+
+.section-title {
+ .section-title {
+  @apply text-4xl font-bold text-center mb-12 text-wale-black;
+}
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a227;
+}
+
+/* Gold Accent Line */
+.gold-line {
+  @apply bg-gradient-to-r from-transparent via-wale-gold to-transparent;
+  height: 1px;
+}
+
+/* Premium Typography */
+.text-luxury {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text-elegant {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:transform hover:-translate-y-2;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-2xl hover:shadow-wale-gold/50;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
