@@ -1,15 +1,18 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'wale - Premium Luxury Fashion',
-  description: 'Experience the epitome of luxury with wale. Premium fashion brand with elegant designs and impeccable quality.',
+  description:
+    'Experience the epitome of luxury with wale. Premium fashion brand with elegant designs and impeccable quality.',
   keywords: 'luxury fashion, premium clothing, wale brand, designer fashion',
   authors: [{ name: 'wale' }],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
+}
+
+// ✅ MOVE viewport OUTSIDE metadata
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({

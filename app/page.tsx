@@ -6,7 +6,7 @@ import Testimonials from '@/components/Testimonials'
 import NewsletterSection from '@/components/NewsletterSection'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
-
+2
 /**
  * Home Page - Main landing page for wale brand
  * Displays all major sections of the luxury fashion brand

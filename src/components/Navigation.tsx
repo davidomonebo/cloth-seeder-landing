@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 /**
  * Navigation Component
@@ -27,6 +26,7 @@ export default function Navigation() {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+
         {/* Logo */}
         <motion.div
           className="text-3xl font-bold text-wale-black font-serif"
@@ -65,28 +65,30 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <motion.div
-          className="md:hidden bg-wale-white border-t border-gray-200"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-        >
-          <div className="px-4 py-4 space-y-4">
-            {navigationLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                className="block text-wale-black font-medium text-luxury hover:text-wale-gold transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-                whileHover={{ x: 10 }}
-              >
-                {link.name}
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="md:hidden bg-wale-white border-t border-gray-200"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            <div className="px-4 py-4 space-y-4">
+              {navigationLinks.map((link) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  className="block text-wale-black font-medium text-luxury hover:text-wale-gold transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                  whileHover={{ x: 10 }}
+                >
+                  {link.name}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   )
 }
